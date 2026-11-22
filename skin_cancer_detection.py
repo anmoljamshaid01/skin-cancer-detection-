@@ -10,9 +10,8 @@ Original file is located at
 import zipfile
 import os
 
-zip_path = '/content/archive (6) (1).zip'
-extract_dir = '/content/extracted_data'
-
+zip_path = os.path.join(os.path.dirname(__file__), "archive (6) (1).zip")
+extract_dir = os.path.join(os.path.dirname(__file__), "extracted_data")
 with zipfile.ZipFile(zip_path, 'r') as zip_ref:
     zip_ref.extractall(extract_dir)
 
