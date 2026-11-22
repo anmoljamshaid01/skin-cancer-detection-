@@ -55,10 +55,11 @@ for c in classes:
             pass
 
 df = pd.DataFrame(data)
-
+print("Columns:", df.columns.tolist())
+print(df.head())
 # 2. Print distribution & basic statistics
 print("--- Class Distribution ---")
-print(df['label'].value_counts())
+# print(df['label'].value_counts())
 print("\n--- Image Dimensions Summary ---")
 print(df[['width', 'height', 'aspect_ratio']].describe())
 
